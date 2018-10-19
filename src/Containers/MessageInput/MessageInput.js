@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MessageInput = props => (
-    <input/>
+    <textarea rows='1' placeholder='Type message here...' />
 );
 
 export default MessageInput;

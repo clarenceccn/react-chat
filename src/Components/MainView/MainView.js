@@ -3,11 +3,12 @@ import Conversation from "../../Containers/Conversation/Conversation";
 import MessageInput from "../../Containers/MessageInput/MessageInput";
 
 class MainView extends Component {
+  state = { messages: [] };
   render() {
     return (
       <div>
         <Conversation />
-        <MessageInput />
+        <MessageInput messages={this.state.messages} />
       </div>
     );
   }
