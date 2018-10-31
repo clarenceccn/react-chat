@@ -1,7 +1,12 @@
-import React from 'react';
+import React from "react";
 
 const MessageInput = props => (
-    <textarea rows='1' placeholder='Type message here...' />
+  <div>
+    <form onSubmit={props.addMessageHandler}>
+      <textarea rows="1" placeholder="Type message here..." />
+      <button type='Submit' >Enter</button>
+    </form>
+  </div>
 );
 
 export default MessageInput;
