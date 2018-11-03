@@ -6,7 +6,7 @@ const MessageItem = props => (
       <p>User name</p>
       <p>Timestamp </p>
     </div>
-    <p>Message</p>
+    <p>{props.message.data}</p>
   </div>
 );
 

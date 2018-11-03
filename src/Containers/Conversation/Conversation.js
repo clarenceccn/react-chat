@@ -1,10 +1,11 @@
 import React from "react";
 import MessageItem from "../MessageItem/MessageItem";
+import './style.css'; 
 
 const Conversation = props => (
   <div>
     {props.messages.map((message, index) => (
-      <MessageItem />
+      <MessageItem message={message}/>
     ))}
   </div>
 );

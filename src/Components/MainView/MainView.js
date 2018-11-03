@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import Conversation from "../../Containers/Conversation/Conversation";
 import MessageInput from "../../Containers/MessageInput/MessageInput";
+import "./MainStyle.css";
 
 class MainView extends Component {
-  state = { messages: [] };
+  state = { messages: [{ data: "hello world" }] };
 
-  componentDidMount() {
-    this.getMessages();
-  }
+  componentDidMount() {}
 
   getMessages = () => {
     fetch("localhost:8080/messages")
@@ -15,7 +14,7 @@ class MainView extends Component {
       .then(data => this.setState({ data }));
   };
 
-  addMessage = (e) => {
+  addMessage = e => {
     fetch("localhost:8080/messages", {
       method: "POST",
       body: JSON.stringify({
@@ -27,9 +26,13 @@ class MainView extends Component {
   deleteMessage = () => {};
   render() {
     return (
-      <div>
-        <Conversation messages={this.state.messages} />
-        <MessageInput addMessageHandler={this.addMessage} />
+      <div className="main-container">
+        <div className="message">
+          <Conversation messages={this.state.messages} />
+        </div>
+        <div className="chat">
+          <MessageInput addMessageHandler={this.addMessage} />
+        </div>
       </div>
     );
   }

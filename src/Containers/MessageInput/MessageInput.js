@@ -1,10 +1,10 @@
 import React from "react";
+import './style.css';
 
 const MessageInput = props => (
-  <div>
-    <form onSubmit={props.addMessageHandler}>
-      <textarea rows="1" placeholder="Type message here..." />
-      <button type='Submit' >Enter</button>
+  <div className="inherit-height">
+    <form className="inherit-height" onSubmit={props.addMessageHandler}>
+      <textarea className="chat-input" rows="1" placeholder="Type message here..." />
     </form>
   </div>
 );
