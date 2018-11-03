@@ -3,9 +3,8 @@
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;  
 }
-
 .conversation-container {
-    display: flex;
-    min-height: 50vh;
+    overflow: auto;
+    width: 100%;
 }
 

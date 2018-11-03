@@ -1,12 +1,11 @@
 import React from "react";
+import './style.css';
 
 const MessageItem = props => (
-  <div>
-    <div>
-      <p>User name</p>
-      <p>Timestamp </p>
-    </div>
-    <p>{props.message.data}</p>
+  <div className="message-item">
+    <p className="message-username">User name</p> 
+    <p className="message-time">Timestamp </p>
+    <p className="message-text">{props.message.data}</p>
   </div>
 );
 

@@ -4,9 +4,9 @@ import MessageInput from "../../Containers/MessageInput/MessageInput";
 import "./MainStyle.css";
 
 class MainView extends Component {
-  state = { messages: [{ data: "hello world" }] };
+  state = { messages: [{ data: "hello world" }, { data: "sup" }, { data: "hello world" }, { data: "sup" }, { data: "hello world sadhsajdhsajdhsajdhsadjsahdasjkh" }, { data: "sup" }, { data: "hello world" }, { data: "sup" }, { data: "hello world" }, { data: "sup" }, { data: "hello world sadhsajdhsajdhsajdhsadjsahdasjkh" }, { data: "sup" }, { data: "hello world" }, { data: "sup" }, { data: "hello world" }, { data: "sup" }, { data: "hello world sadhsajdhsajdhsajdhsadjsahdasjkh" }, { data: "sup" }, { data: "hello world" }, { data: "sup" }, { data: "hello world" }, { data: "sup" }, { data: "hello world sadhsajdhsajdhsajdhsadjsahdasjkh" }, { data: "sup" }, { data: "hello world" }, { data: "sup" }, { data: "hello world" }, { data: "sup" }, { data: "hello world sadhsajdhsajdhsajdhsadjsahdasjkh" }, { data: "sup" }, { data: "hello world" }, { data: "sup" }, { data: "hello world" }, { data: "sup" }, { data: "hello world sadhsajdhsajdhsajdhsadjsahdakdjsakdjaskdjaskdjsakdjasdkasjdklsajdaksdjaskdjasdkasjdlaksjdlkasdjaskdjsakldjsadksajdkasjsjkh" }, { data: "sup" }] };
 
-  componentDidMount() {}
+  componentDidMount() { }
 
   getMessages = () => {
     fetch("localhost:8080/messages")
@@ -23,15 +23,15 @@ class MainView extends Component {
     });
   };
 
-  deleteMessage = () => {};
+  deleteMessage = () => { };
   render() {
     return (
       <div className="main-container">
-        <div className="message">
-          <Conversation messages={this.state.messages} />
-        </div>
-        <div className="chat">
-          <MessageInput addMessageHandler={this.addMessage} />
+          <div className="message">
+            <Conversation messages={this.state.messages} />
+          </div>
+          <div className="chat">
+            <MessageInput addMessageHandler={this.addMessage} />
         </div>
       </div>
     );
