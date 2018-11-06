@@ -26,7 +26,7 @@ class MainView extends Component {
   deleteMessage = () => { };
   render() {
     return (
-      <div className="main-container">
+      <div className="main">
           <div className="message">
             <Conversation messages={this.state.messages} />
           </div>
