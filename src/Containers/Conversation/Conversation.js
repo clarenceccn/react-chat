@@ -1,13 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 import MessageItem from "../MessageItem/MessageItem";
-import './style.css'; 
+import "./style.css";
 
-const Conversation = props => (
-  <div className="conversation-container">
-    {props.messages.map((message, index) => (
-      <MessageItem message={message}/>
-    ))}
-  </div>
-);
+class Conversation extends Component {
+  render() {
+    return (
+      <div className="conversation-container">
+        {this.props.messages.map((message, index) => (
+          <MessageItem key={index} message={message} />
+        ))}
+      </div>
+    );
+  }
+}
 
 export default Conversation;
